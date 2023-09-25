@@ -1,0 +1,47 @@
+@font-face {
+  font-family: "Space Grotesk";
+  src: url("../fonts/SpaceGrotesk-VariableFont_wght.ttf") format("truetype");
+  font-weight: 300;
+}
+
+@font-face {
+  font-family: "Space Grotesk";
+  src: url("../fonts/static/SpaceGrotesk-Medium.ttf") format("truetype");
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: "Space Grotesk";
+  src: url("../fonts/static/SpaceGrotesk-Bold.ttf") format("truetype");
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: "icomoon";
+  src: url("../fonts/icomoon.eot");
+  src: url("../fonts/icomoon.svg") format("svg"),
+    url("../fonts/icomoon.eot") format("embedded-opentype"),
+    url("../fonts/icomoon.ttf") format("truetype"),
+    url("../fonts/icomoon.woff") format("woff");
+  font-weight: normal;
+}
+
+[class^="icon-"],
+[class*=" icon-"] {
+  font-family: "icomoon";
+  font-style: normal;
+  font-weight: normal;
+}
+
+.icon-frontend-mentor:before {
+  content: "\e900";
+}
+.icon-github:before {
+  content: "\e901";
+}
+.icon-linkedin:before {
+  content: "\e902";
+}
+.icon-twitter:before {
+  content: "\e903";
+}
