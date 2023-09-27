@@ -16,7 +16,8 @@
 
   --body: "Space Grotesk", sans-serif;
   --heading-m: 1.5rem;
-  --heading-m: clamp()
+  --heading-l: clamp(2rem, 1.2857rem + 3.5714vw, 3rem);
+  --heading-xl: clamp(2.5rem, 1.0714 + 7.1429vw, 4.5rem);
 }
 
 * {
@@ -43,6 +44,7 @@ body {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
+  overflow-y: hidden;
   background-color: var(--primary);
 }
 
@@ -55,15 +57,151 @@ body {
   position: absolute;
   top: 0;
   width: 100%;
+  z-index: 5;
 }
 
+/* ----- NAVIGATION  ---- */
 .navigation {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1.5rem 0;
+}
+
+.navigation-logo {
+  flex-grow: 1;
+  color: var(--white);
+  font-size: var(--heading-m);
+  line-height: 2rem;
+  letter-spacing: -0.02081rem;
+  padding-bottom: 1.5rem;
+}
+
+.social-links {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.social-link {
+  color: var(--white);
+  font-size: 1.23rem;
+}
+
+.social-link:hover {
+  color: var(--secondary);
+}
+
+@media (min-width: 48em) /* 48em = 768px*/ {
+  .navigation {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .navigation-logo {
+    font-size: 2rem;
+    line-height: 2rem; /* 100% */
+    letter-spacing: -0.02775rem;
+  }
+
+  .social-link {
+    font-size: var(--heading-m);
+  }
+}
+
+/* ----------------- HERO ---------------*/
+.hero {
+  position: relative;
+}
+
+.header-container {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-.navigation-logo {
+.hero-content {
+  text-align: center;
+}
+
+.hero-image {
+  position: relative;
+  z-index: 2;
+  width: clamp(10.88rem, 4.25rem + 32.98vw, 20.12rem);
+  background: linear-gradient(180deg, transparent 0.65%, var(--dark-gray) 100%);
+}
+
+.hero-image .image-profile {
+  width: 100%;
+}
+
+.hero-title {
+  margin-top: 4rem;
+}
+
+.bg-position {
+  position: absolute;
+  /* z-index: 0;
+  width: max-content; */
+}
+
+.hero-rings {
+  top: 18%;
+  transform: translateX(-60%);
+}
+
+.hero-circle {
+  bottom: 0;
+  right: 0;
+  transform: translateX(60%);
+}
+
+.title {
+  font-size: var(--heading-l);
+  line-height: 2.5rem;
+  letter-spacing: -0.071rem;
+  font-weight: 700;
+}
+
+.title span {
+  border-bottom: 0.25rem solid var(--secondary);
+}
+
+.hero-text {
+  font-weight: 300;
+  margin: 2.4rem 0;
+}
+
+.button {
   color: var(--white);
-  font-size: var(--heading-m);
+  border-bottom: solid var(--secondary);
+  padding: 1rem;
+  background: transparent;
+  text-transform: uppercase;
+  font-weight: 700;
+  line-height: 1.625rem;
+  letter-spacing: 0.14288rem;
+}
+
+.button:hover {
+  color: var(--secondary);
+}
+
+.skills {
+  margin-top: 4rem;
+  margin-bottom: 4rem;
+  border-top: 2px solid var(--white);
+  border-bottom: 2px solid var(--white);
+  text-align: center;
+}
+
+.skills-content {
+  margin-bottom: 1rem;
+}
+
+.skills-title {
+  font-size: xx-large;
+}
+.skills-experience {
+  font-size: medium;
+  font-weight: 300;
 }
