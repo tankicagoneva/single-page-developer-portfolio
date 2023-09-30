@@ -17,7 +17,7 @@
   --body: "Space Grotesk", sans-serif;
   --heading-m: 1.5rem;
   --heading-l: clamp(2rem, 1.2857rem + 3.5714vw, 3rem);
-  --heading-xl: clamp(2.5rem, 1.0714 + 7.1429vw, 4.5rem);
+  --heading-xl: clamp(2.5rem, 1.0714rem + 7.1429vw, 4.5rem);
 }
 
 * {
@@ -51,6 +51,7 @@ body {
 .container {
   flex-grow: 1;
   padding: 0 1rem;
+  margin: 0 auto;
 }
 
 .header {
@@ -132,16 +133,13 @@ body {
 
 .hero-image .image-profile {
   width: 100%;
-}
-
-.hero-title {
-  margin-top: 4rem;
+  object-fit: cover;
 }
 
 .bg-position {
   position: absolute;
-  /* z-index: 0;
-  width: max-content; */
+  z-index: 0;
+  width: max-content;
 }
 
 .hero-rings {
@@ -152,12 +150,12 @@ body {
 .hero-circle {
   bottom: 0;
   right: 0;
-  transform: translateX(60%);
+  transform: translateX(90%);
 }
 
 .title {
-  font-size: var(--heading-l);
-  line-height: 2.5rem;
+  font-size: var(--heading-xl);
+  line-height: 1em;
   letter-spacing: -0.071rem;
   font-weight: 700;
 }
@@ -174,7 +172,7 @@ body {
 .button {
   color: var(--white);
   border-bottom: solid var(--secondary);
-  padding: 1rem;
+  padding: 1rem 0;
   background: transparent;
   text-transform: uppercase;
   font-weight: 700;
@@ -186,16 +184,111 @@ body {
   color: var(--secondary);
 }
 
+.hero-title {
+  max-width: 14ch; /* ch- character width */
+  margin-top: 4rem;
+  margin-bottom: 2.5rem;
+}
+
+@media (min-width: 48em) /* 48em = 768px*/ {
+  .container {
+    padding: 0 2rem;
+  }
+
+  .title {
+    --heading-xl: clamp(4.5rem, 2.72rem + 3.7vw, 5.5rem);
+    letter-spacing: -0.12781rem;
+  }
+
+  .header-container {
+    position: relative;
+    align-items: start;
+  }
+
+  .hero-image {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: clamp(20.12rem, 6.44rem + 28.47vw, 27.81rem);
+  }
+
+  .hero-content {
+    text-align: left;
+    height: 100%;
+    position: relative;
+    z-index: 4;
+    padding: 2rem 0;
+    padding: clamp(9.44rem, 4.23rem + 10.85vw, 12.37rem) 0
+      clamp(2rem, -8.55rem + 21.99vw, 7.93rem) 0;
+  }
+
+  .hero-title {
+    position: relative;
+    z-index: 3;
+    max-width: 10ch;
+    margin-bottom: 4rem;
+  }
+
+  .hero-text {
+    max-width: 45ch;
+  }
+
+  .hero-rings {
+    top: 13%;
+    transform: translateX(-50%);
+  }
+
+  .hero-circle {
+    transform: translateX(50%);
+  }
+}
+
+@media (min-width: 62.5rem) {
+  .hero-image .image-profile {
+    height: 45rem;
+  }
+}
+
+@media (min-width: 78em) {
+  .container {
+    max-width: 73.3rem;
+  }
+
+  .hero-title {
+    max-width: 14ch;
+  }
+
+  .hero-text {
+    max-width: 36ch;
+  }
+
+  .hero-rings {
+    top: 26%;
+    transform: translateX(-18%);
+  }
+
+  .hero-circle {
+    transform: translateX(-50%);
+    left: 0;
+    bottom: 3rem;
+  }
+}
 .skills {
+  /* border-top: 2px solid var(--white);
+  border-bottom: 2px solid var(--white); */
+  text-align: center;
+  position: relative;
+}
+
+.skills-grid {
+  border-top: var(--border-divider);
+  border-bottom: var(--border-divider);
   margin-top: 4rem;
   margin-bottom: 4rem;
-  border-top: 2px solid var(--white);
-  border-bottom: 2px solid var(--white);
-  text-align: center;
 }
 
 .skills-content {
-  margin-bottom: 1rem;
+  margin-bottom: 2rem;
 }
 
 .skills-title {
@@ -204,4 +297,31 @@ body {
 .skills-experience {
   font-size: medium;
   font-weight: 300;
+}
+
+@media (min-width: 48em) /* 48em = 768px*/ {
+  .skills {
+    text-align: left;
+  }
+
+  .skills-grid {
+    display: flex;
+    flex-wrap: wrap;
+    padding-top: 4rem;
+    border-bottom: none;
+  }
+
+  .skills-content {
+    flex-basis: 50%;
+  }
+
+  .skills-title {
+    padding-bottom: 0.8rem;
+  }
+}
+
+@media (min-width: 75em) {
+  .skills-content {
+    flex-basis: 33.3%;
+  }
 }
