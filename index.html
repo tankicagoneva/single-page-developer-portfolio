@@ -296,31 +296,44 @@
                 possible.
               </p>
             </div>
-            <form action="" class="form">
+            <form
+              novalidate
+              class="form"
+              method="POST"
+              data-netlify="true"
+            >
               <div class="form-group">
                 <input
                   type="text"
                   placeholder="name"
+                  name="name"
+                  id="name"
                   required
                   class="form-input form-field"
                 />
-                <div class="form-error-message">You name must not be empty</div>
+                <div class="form-error-message" id="nameError">
+                  Your name must not be empty
+                </div>
               </div>
               <div class="form-group">
                 <input
                   type="email"
                   placeholder="email"
+                  name="email"
+                  id="email"
                   required
                   class="form-input form-field"
                 />
-                <div class="form-error-message">Sorry, invalid format here</div>
+                <div class="form-error-message" id="emailError">
+                  Sorry, invalid format here
+                </div>
               </div>
               <div class="form-group">
                 <textarea
-                  name="message"
-                  id="message"
                   class="form-textarea form-field"
                   placeholder="message"
+                  name="message"
+                  id="message"
                 ></textarea>
               </div>
               <button type="submit" class="button form-button">
@@ -355,5 +368,6 @@
         <!-- Contact end -->
       </main>
     </div>
+    <script src="./assets/js/script.js"></script>
   </body>
 </html>
