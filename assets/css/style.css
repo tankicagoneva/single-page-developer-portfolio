@@ -8,10 +8,11 @@
 
   /* Brand Colors */
   --primary: #151515;
-  --secondary: #4ee1a0;
+  --secondary: #4ee1a0; /* bright green */
   --dark-gray: #242424;
   --gray: #d9d9d9;
-  --fail: #ff6f5b;
+  /* Error / fail color — tuned to a pink-tinted variant to match the theme */
+  --fail: #ff6f8b;
 
   --border-divider: 0.0625rem solid var(--white);
 
@@ -39,6 +40,36 @@ body {
   font-family: var(--body);
   color: var(--white);
   line-height: 1.65;
+}
+
+/* Screen-reader utility */
+.sr-only {
+  position: absolute !important;
+  height: 1px; width: 1px;
+  overflow: hidden;
+  clip: rect(1px, 1px, 1px, 1px);
+  white-space: nowrap; /* added line to avoid width expansion */
+}
+
+/* Skip link - visible on keyboard focus */
+.skip-link {
+  position: absolute;
+  top: -40px;
+  left: 0;
+  background: var(--secondary);
+  color: var(--white);
+  padding: 0.5rem 1rem;
+  z-index: 9999;
+  transition: top 0.15s ease-in-out;
+}
+.skip-link:focus {
+  top: 0.5rem;
+}
+
+/* Stronger focus-visible styles for keyboard users */
+:focus-visible {
+  outline: 3px solid var(--secondary);
+  outline-offset: 3px;
 }
 
 .wrapper {
@@ -118,6 +149,8 @@ body {
 .hero-image .image-profile {
   width: 100%;
   object-fit: cover;
+  /* Reserve space to reduce CLS */
+  aspect-ratio: 1 / 1;
 }
 
 .bg-position {
@@ -512,6 +545,12 @@ body {
 
   .project-image {
     display: block;
+  }
+  .project-image img{
+    width:100%;
+    height:auto;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
   }
 
   .project-buttons {

@@ -29,6 +29,8 @@
     <title>Frontend Mentor | Single-page developer portfolio</title>
   </head>
   <body>
+    <!-- Skip link for keyboard users -->
+    <a class="skip-link" href="#main-content">Skip to main content</a>
     <div class="wrapper">
       <!-- Header Start -->
       <header class="header">
@@ -37,20 +39,20 @@
             <a href="#" class="navigation-logo">adamkeyes</a>
 
             <div class="social-links">
-              <a href="https://github.com/" class="social-link">
-                <i class="icon-github"></i>
+              <a href="https://github.com/" class="social-link" aria-label="GitHub">
+                <i class="icon-github" aria-hidden="true"></i>
               </a>
 
-              <a href="https://frontendmentor.io/" class="social-link">
-                <i class="icon-frontend-mentor"></i>
+              <a href="https://frontendmentor.io/" class="social-link" aria-label="Frontend Mentor">
+                <i class="icon-frontend-mentor" aria-hidden="true"></i>
               </a>
 
-              <a href="https://www.linkedin.com/" class="social-link">
-                <i class="icon-linkedin"></i>
+              <a href="https://www.linkedin.com/" class="social-link" aria-label="LinkedIn">
+                <i class="icon-linkedin" aria-hidden="true"></i>
               </a>
 
-              <a href="https://twitter.com/" class="social-link">
-                <i class="icon-twitter"></i>
+              <a href="https://twitter.com/" class="social-link" aria-label="Twitter">
+                <i class="icon-twitter" aria-hidden="true"></i>
               </a>
             </div>
           </div>
@@ -58,16 +60,16 @@
       </header>
       <!-- Header End -->
       <!-- Main content start -->
-      <main>
+      <main id="main-content">
         <section class="hero">
           <div class="bg-position hero-rings">
-            <img src="/assets/images/pattern-rings.svg" alt="rings icon" />
+            <img src="/assets/images/pattern-rings.svg" alt="" aria-hidden="true" />
           </div>
 
           <div class="container header-container">
             <div class="hero-image">
               <div class="bg-position hero-circle">
-                <img src="/assets/images/pattern-circle.svg" alt="rings icon" />
+                <img src="/assets/images/pattern-circle.svg" alt="" aria-hidden="true" />
               </div>
               <picture>
                 <source
@@ -168,11 +170,11 @@
                   <a href="https://github.com/" class="button">VIEW CODE</a>
                 </div>
               </div>
-              <div class="o-modal o-modal-hidden" id="modal-1">
+              <div class="o-modal o-modal-hidden" id="modal-1" role="dialog" aria-modal="true" aria-labelledby="modal-1-heading" aria-hidden="true" tabindex="-1">
                 <div class="o-modal-close">
-                  <a class="o-modal-button-close">&times;</a>
+                  <button class="o-modal-button-close" aria-label="Close dialog">&times;</button>
                 </div>
-                <h5 class="o-modal-heading">Project Details</h5>
+                <h5 id="modal-1-heading" class="o-modal-heading">Project Details</h5>
                 <h2 class="o-modal-list">Client:</h2>
                 <p>ABC-1 Corporation</p>
 
@@ -223,11 +225,11 @@
                   <a href="https://github.com/" class="button">VIEW CODE</a>
                 </div>
               </div>
-              <div class="o-modal o-modal-hidden" id="modal-2">
+              <div class="o-modal o-modal-hidden" id="modal-2" role="dialog" aria-modal="true" aria-labelledby="modal-2-heading" aria-hidden="true" tabindex="-1">
                 <div class="o-modal-close">
-                  <a class="o-modal-button-close">&times;</a>
+                  <button class="o-modal-button-close" aria-label="Close dialog">&times;</button>
                 </div>
-                <h5 class="o-modal-heading">Project Details</h5>
+                <h5 id="modal-2-heading" class="o-modal-heading">Project Details</h5>
                 <h2 class="o-modal-list">Client:</h2>
                 <p>ABC-2 Corporation</p>
 
@@ -278,11 +280,11 @@
                   <a href="https://github.com/" class="button">VIEW CODE</a>
                 </div>
               </div>
-              <div class="o-modal o-modal-hidden" id="modal-3">
+              <div class="o-modal o-modal-hidden" id="modal-3" role="dialog" aria-modal="true" aria-labelledby="modal-3-heading" aria-hidden="true" tabindex="-1">
                 <div class="o-modal-close">
-                  <a class="o-modal-button-close">&times;</a>
+                  <button class="o-modal-button-close" aria-label="Close dialog">&times;</button>
                 </div>
-                <h5 class="o-modal-heading">Project Details</h5>
+                <h5 id="modal-3-heading" class="o-modal-heading">Project Details</h5>
                 <h2 class="o-modal-list">Client:</h2>
                 <p>ABC-3 Corporation</p>
 
@@ -333,11 +335,11 @@
                   <a href="https://github.com/" class="button">VIEW CODE</a>
                 </div>
               </div>
-              <div class="o-modal o-modal-hidden" id="modal-4">
+              <div class="o-modal o-modal-hidden" id="modal-4" role="dialog" aria-modal="true" aria-labelledby="modal-4-heading" aria-hidden="true" tabindex="-1">
                 <div class="o-modal-close">
-                  <a class="o-modal-button-close">&times;</a>
+                  <button class="o-modal-button-close" aria-label="Close dialog">&times;</button>
                 </div>
-                <h5 class="o-modal-heading">Project Details</h5>
+                <h5 id="modal-4-heading" class="o-modal-heading">Project Details</h5>
                 <h2 class="o-modal-list">Client:</h2>
                 <p>ABC-4 Corporation</p>
 
@@ -388,11 +390,11 @@
                   <a href="https://github.com/" class="button">VIEW CODE</a>
                 </div>
               </div>
-              <div class="o-modal o-modal-hidden" id="modal-5">
+              <div class="o-modal o-modal-hidden" id="modal-5" role="dialog" aria-modal="true" aria-labelledby="modal-5-heading" aria-hidden="true" tabindex="-1">
                 <div class="o-modal-close">
-                  <a class="o-modal-button-close">&times;</a>
+                  <button class="o-modal-button-close" aria-label="Close dialog">&times;</button>
                 </div>
-                <h5 class="o-modal-heading">Project Details</h5>
+                <h5 id="modal-5-heading" class="o-modal-heading">Project Details</h5>
                 <h2 class="o-modal-list">Client:</h2>
                 <p>ABC-5 Corporation</p>
 
@@ -444,11 +446,11 @@
                   <a href="https://github.com/" class="button">VIEW CODE</a>
                 </div>
               </div>
-              <div class="o-modal o-modal-hidden" id="modal-6">
+              <div class="o-modal o-modal-hidden" id="modal-6" role="dialog" aria-modal="true" aria-labelledby="modal-6-heading" aria-hidden="true" tabindex="-1">
                 <div class="o-modal-close">
-                  <a class="o-modal-button-close">&times;</a>
+                  <button class="o-modal-button-close" aria-label="Close dialog">&times;</button>
                 </div>
-                <h5 class="o-modal-heading">Project Details</h5>
+                <h5 id="modal-6-heading" class="o-modal-heading">Project Details</h5>
                 <h2 class="o-modal-list">Client:</h2>
                 <p>ABC-6 Corporation</p>
 
@@ -485,6 +487,7 @@
             <img
               src="/assets/images/pattern-rings.svg"
               alt="rings icon"
+              aria-hidden="true"
               loading="lazy"
             />
           </div>
@@ -498,8 +501,9 @@
                 possible.
               </p>
             </div>
-            <form novalidate class="form" method="POST" data-netlify="true">
+            <form novalidate class="form" method="POST" data-netlify="true" aria-label="Contact form">
               <div class="form-group">
+                <label for="name" class="sr-only">Name</label>
                 <input
                   type="text"
                   placeholder="name"
@@ -507,12 +511,15 @@
                   id="name"
                   required
                   class="form-input form-field"
+                  aria-required="true"
+                  aria-describedby="nameError"
                 />
-                <div class="form-error-message" id="nameError">
+                <div class="form-error-message" id="nameError" role="alert" aria-live="polite">
                   Your name must not be empty
                 </div>
               </div>
               <div class="form-group">
+                <label for="email" class="sr-only">Email address</label>
                 <input
                   type="email"
                   placeholder="email"
@@ -520,20 +527,25 @@
                   id="email"
                   required
                   class="form-input form-field"
+                  aria-required="true"
+                  aria-describedby="emailError"
                 />
-                <div class="form-error-message" id="emailError">
+                <div class="form-error-message" id="emailError" role="alert" aria-live="polite">
                   Sorry, invalid format here
                 </div>
               </div>
               <div class="form-group">
+                <label for="message" class="sr-only">Message</label>
                 <textarea
                   class="form-textarea form-field"
                   placeholder="message"
                   name="message"
                   id="message"
+                  aria-describedby="messageHelp"
                 ></textarea>
+                <div id="messageHelp" class="sr-only">Optional message field</div>
               </div>
-              <button type="submit" class="button form-button">
+              <button type="submit" class="button form-button" aria-label="Send message">
                 send message
               </button>
             </form>
@@ -543,20 +555,20 @@
               <a href="#" class="navigation-logo">adamkeyes</a>
 
               <div class="social-links">
-                <a href="https://github.com/" class="social-link">
-                  <i class="icon-github"></i>
+                <a href="https://github.com/" class="social-link" aria-label="GitHub">
+                  <i class="icon-github" aria-hidden="true"></i>
                 </a>
 
-                <a href="https://frontendmentor.io/" class="social-link">
-                  <i class="icon-frontend-mentor"></i>
+                <a href="https://frontendmentor.io/" class="social-link" aria-label="Frontend Mentor">
+                  <i class="icon-frontend-mentor" aria-hidden="true"></i>
                 </a>
 
-                <a href="https://www.linkedin.com/" class="social-link">
-                  <i class="icon-linkedin"></i>
+                <a href="https://www.linkedin.com/" class="social-link" aria-label="LinkedIn">
+                  <i class="icon-linkedin" aria-hidden="true"></i>
                 </a>
 
-                <a href="https://twitter.com/" class="social-link">
-                  <i class="icon-twitter"></i>
+                <a href="https://twitter.com/" class="social-link" aria-label="Twitter">
+                  <i class="icon-twitter" aria-hidden="true"></i>
                 </a>
               </div>
             </div>
