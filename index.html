@@ -20,8 +20,10 @@
       integrity="sha512-oHDEc8Xed4hiW6CxD7qjbnI+B07vDdX7hEPTvn9pSZO1bcRqHp8mj9pyr+8RVC2GmtEfI2Bi9Ke9Ass0as+zpg=="
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
-      rel="preload"
     />
+
+    <!-- Preload the profile image used for the hero to improve LCP -->
+    <link rel="preload" href="/assets/images/image-profile-mobile.webp" as="image">
 
     <link rel="stylesheet" href="/assets/css/style.css" />
     <title>Frontend Mentor | Single-page developer portfolio</title>
@@ -143,13 +145,11 @@
             <div class="projects-grid">
               <div class="project">
                 <a class="project-image">
-                  <img
-                    src="./assets/images/thumbnail-project-1-small.webp"
-                    alt="DESIGN PORTFOLIO IMAGE"
-                    loading="lazy"
-                    width="auto"
-                    height="auto"
-                  />
+                    <img
+                      src="./assets/images/thumbnail-project-1-small.webp"
+                      alt="DESIGN PORTFOLIO IMAGE"
+                      loading="lazy"
+                    />
                 </a>
                 <div class="project-body">
                   <h3 class="project-title">DESIGN PORTFOLIO</h3>
@@ -204,8 +204,6 @@
                     src="./assets/images/thumbnail-project-2-small.webp"
                     alt="E-LEARNING LANDING PAGE"
                     loading="lazy"
-                    width="auto"
-                    height="auto"
                   />
                 </a>
                 <div class="project-body">
@@ -260,8 +258,7 @@
                   <img
                     src="./assets/images/thumbnail-project-3-small.webp"
                     alt="TODO WEB APP"
-                    width="auto"
-                    height="auto"
+                    loading="lazy"
                   />
                 </a>
                 <div class="project-body">
@@ -316,8 +313,7 @@
                   <img
                     src="./assets/images/thumbnail-project-4-small.webp"
                     alt="ENTERTAINMENT WEB APP"
-                    width="auto"
-                    height="auto"
+                    loading="lazy"
                   />
                 </a>
                 <div class="project-body">
@@ -372,8 +368,7 @@
                   <img
                     src="./assets/images/thumbnail-project-5-small.webp"
                     alt="MEMORY GAME"
-                    width="auto"
-                    height="auto"
+                    loading="lazy"
                   />
                 </a>
                 <div class="project-body">
@@ -429,8 +424,7 @@
                   <img
                     src="./assets/images/thumbnail-project-6-small.webp"
                     alt="ART GALLERY SHOWCASE"
-                    width="auto"
-                    height="auto"
+                    loading="lazy"
                   />
                 </a>
                 <div class="project-body">
@@ -487,13 +481,11 @@
 
         <!-- Contact start-->
         <footer class="footer" id="contact">
-          <div class="bg-position footer-ring">
+            <div class="bg-position footer-ring">
             <img
               src="/assets/images/pattern-rings.svg"
               alt="rings icon"
               loading="lazy"
-              width="auto"
-              height="auto"
             />
           </div>
 
